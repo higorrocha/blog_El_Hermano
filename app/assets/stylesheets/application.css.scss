@@ -1,12 +1,10 @@
 @import 'normalize';
 
-// Cores 
 $dark: #424652;
+$white: #FFFFFF;
 $light: #9a9da4;
 $highlight: #8bc6db;
 $border: #E9E9E9;
-$white: #FFFFFF;
-
 
 * {
 	box-sizing: border-box;
@@ -39,6 +37,16 @@ body {
 
 .clearfix:after {
 	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+.notice, .alert {
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #E9E9E9;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
@@ -91,15 +99,15 @@ hr {
 	padding: 2.5em 5%;
 	border-bottom: 1px solid $border;
 	.name {
-			font-weight: 700;
-			font-size: .7em;
-			letter-spacing: 4px;
-			text-transform: uppercase;
-			border: 2px solid $border;
-			padding: 1rem;
-			text-decoration: none;
-			color: $dark;
-			float: left;
+		font-weight: 700;
+		font-size: .8em;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		border: 2px solid $border;
+		padding: 1rem;
+		text-decoration: none;
+		color: $dark;
+		float: left;
 	}
 	nav {
 		float: right;
@@ -134,7 +142,7 @@ hr {
 		i {
 			color: $dark;
 			margin-left: 1em;
-			padding-left: .2em;
+			padding-top: .2em;
 			&:hover {
 				color: $highlight;
 			}
@@ -155,7 +163,7 @@ textarea {
 	min-height: 20em;
 }
 
-input [type="submit"] {
+input[type="submit"], .button {
 	outline: none;
 	background: transparent;
 	border: 2px solid $border;
@@ -168,6 +176,18 @@ input [type="submit"] {
 		border: 2px solid $highlight;
 		color: $highlight;
 	}
+}
+
+.project_button {
+	background: $highlight;
+	color: $white;
+	text-decoration: none;
+	padding: 1em 2em;
+}
+
+.button_wrapper {
+	margin: 4em 0 0 0;
+	text-align: center;
 }
 
 @import 'welcome';
