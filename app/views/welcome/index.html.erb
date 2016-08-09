@@ -1,0 +1,26 @@
+<div class="wrapper wrapper_padding clearfix">
+		<div class="col-1 about homepage_content">
+				<h2>About</h2>
+				<hr>
+				<p>Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim. Cevadis im ampola pa arma uma pindureta. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Quem num gosta di mé, boa gente num é.</p>
+				<p>Interagi no mé, cursus quis, vehicula ac nisi. <a href="#">Me</a> faiz elementum girarzis, nisi eros vermeio. Detraxit consequat et quo num tendi nada. Nullam volutpat risus commodo, ut interdum diam laoreet. Sed non consequat odio.</p>
+		</div>
+		<div class="col-2 homepage_content">
+				<h2>Stuff I've written</h2>
+				<hr>
+				<% @posts.each do |post| %>
+					<h3><a href="#"><%= link_to post.title, post %></a></h3>
+					<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+				<% end %>
+		</div>
+		<div class="col-3 homepage_content">
+				<h2>Stuff I've built</h2>
+				<hr>
+				<h3><a href="#">New Logo for Your Brand</a></h3>
+				<p class="date">Wednesday July 20th</p>
+				<h3><a href="#">7 Tips for Designing Consistency</a></h3>
+				<p class="date">Friday July 22th</p>
+				<h3><a href="#">100+ iPhone PSD and Vector Mockups</a></h3>
+				<p class="date">Monday July 25th</p>
+		</div>
+</div>
