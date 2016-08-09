@@ -16,11 +16,9 @@
 		<div class="col-3 homepage_content">
 				<h2>Stuff I've built</h2>
 				<hr>
-				<h3><a href="#">New Logo for Your Brand</a></h3>
-				<p class="date">Wednesday July 20th</p>
-				<h3><a href="#">7 Tips for Designing Consistency</a></h3>
-				<p class="date">Friday July 22th</p>
-				<h3><a href="#">100+ iPhone PSD and Vector Mockups</a></h3>
-				<p class="date">Monday July 25th</p>
+				<% @projects.each do |project| %>
+					<h3><a href="#"><%= link_to project.title, project %></a></h3>
+					<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+				<% end %>
 		</div>
 </div>
